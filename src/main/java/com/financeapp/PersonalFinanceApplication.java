@@ -12,6 +12,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableScheduling
 public class PersonalFinanceApplication {
 
+    private PersonalFinanceApplication() {
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(PersonalFinanceApplication.class, args);
     }
