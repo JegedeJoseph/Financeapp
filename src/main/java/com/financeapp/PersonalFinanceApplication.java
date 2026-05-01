@@ -7,9 +7,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
-@EnableTransactionManagement
-@EnableAsync
-@EnableScheduling
 public class PersonalFinanceApplication {
 
     public static void main(String[] args) {
