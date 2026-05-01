@@ -2,11 +2,11 @@ spring:
   application:
     name: personal-finance-manager
   
-  datasource:
-    url: jdbc:postgresql://financeapp_4byc_user:f425L2oIxiOYKr1jqNN5D4YdNkzxex1q@dpg-d7pk2ppf9bms73akiu60-a.oregon-postgres.render.com/financeapp_4byc
-    username: financeapp_4byc_user
-    password: f425L2oIxiOYKr1jqNN5D4YdNkzxex1q
-    driver-class-name: org.postgresql.Driver
+  spring:
+    datasource:
+      url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+      username: ${PGUSER}
+      password: ${PGPASSWORD}
   
   jpa:
     hibernate:
