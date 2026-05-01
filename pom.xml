@@ -153,6 +153,9 @@
                             <version>${lombok.version}</version>
                         </path>
                     </annotationProcessorPaths>
+                    <compilerArgs>
+                    <arg>-parameters</arg>   <!-- ← Add this -->
+                </compilerArgs>
                 </configuration>
             </plugin>
         </plugins>
