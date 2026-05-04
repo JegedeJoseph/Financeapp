@@ -52,7 +52,7 @@ springdoc:
 logging:
   level:
     com.financeapp: DEBUG
-    org.springframework.security: INFO
+    org.springframework.security: DEBUG
     org.hibernate.SQL: WARN
 
 management:
