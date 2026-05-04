@@ -48,6 +48,7 @@ springdoc:
   swagger-ui:
     path: /swagger-ui.html
     operations-sorter: method
+    url: /v3/api-docs
 
 logging:
   level:
