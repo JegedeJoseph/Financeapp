@@ -48,6 +48,14 @@ public class SecurityConfig {
 
         return http.build();
     }
+    @Bean
+    public WebSecurityCustomizer webSecurityCustomizer() {
+        return (web) -> web.ignoring().requestMatchers(
+                "/swagger-ui.html",
+                "/swagger-ui/**",
+                "/v3/api-docs/**"
+        );
+    }
 
     @Bean
     public AuthenticationProvider authenticationProvider() {
