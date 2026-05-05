@@ -6,19 +6,17 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-@Table(name = "bank_accounts", indexes = {
-        @Index(name = "idx_account_user", columnList = "user_id"),
-        @Index(name = "idx_account_number", columnList = "account_number")
-})
+
+@Convert(converter = AccountTypeConverter.class)
+@Column(nullable = false)
+private AccountType accountType;
+
 @Data
 @Builder
 @NoArgsConstructor
