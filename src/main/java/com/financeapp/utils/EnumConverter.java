@@ -1,7 +1,9 @@
 package com.financeapp.utils;
 
 import jakarta.persistence.AttributeConverter;
+import jakarta.persistence.Converter;
 
+@Converter
 public abstract class EnumConverter<E extends Enum<E>> implements AttributeConverter<E, String> {
 
     private final Class<E> enumClass;

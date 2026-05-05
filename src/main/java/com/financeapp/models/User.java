@@ -1,6 +1,7 @@
 package com.financeapp.models;
 
 import com.financeapp.models.enums.UserRole;
+import com.financeapp.utils.UserRoleConverter;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -36,7 +37,7 @@ import java.util.List;
         @Column(nullable = false)
         private String passwordHash;
 
-        @Enumerated(EnumType.STRING)
+        @Convert(converter = UserRoleConverter.class)   // if you created that converter
         @Column(nullable = false)
         private UserRole role;
 

@@ -1,22 +1,25 @@
 package com.financeapp.models;
 
 import com.financeapp.models.enums.AccountType;
+import com.financeapp.utils.AccountTypeConverter;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-
-@Convert(converter = AccountTypeConverter.class)
-@Column(nullable = false)
-private AccountType accountType;
-
+@Entity
+@Table(name = "bank_accounts", indexes = {
+        @Index(name = "idx_account_user", columnList = "user_id"),
+        @Index(name = "idx_account_number", columnList = "account_number")
+})
 @Data
 @Builder
 @NoArgsConstructor
@@ -37,7 +40,7 @@ public class BankAccount {
     @Column(nullable = false, length = 50)
     private String accountNumber;
 
-    @Enumerated(EnumType.STRING)
+    @Convert(converter = AccountTypeConverter.class)
     @Column(nullable = false)
     private AccountType accountType;
 
@@ -50,6 +53,7 @@ public class BankAccount {
     @Column(length = 255)
     private String accountName;
 
+    @Builder.Default
     private boolean active = true;
 
     @CreationTimestamp
@@ -60,6 +64,6 @@ public class BankAccount {
     private LocalDateTime updatedAt;
 
     @OneToMany(mappedBy = "account", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Builder.Default
     private List<Transaction> transactions = new ArrayList<>();
-
 }

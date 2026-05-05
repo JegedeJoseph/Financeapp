@@ -2,6 +2,7 @@ package com.financeapp.models;
 
 
 import com.financeapp.models.enums.TransactionCategory;
+import com.financeapp.utils.TransactionCategoryConverter;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -34,7 +35,7 @@ public class Budget {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @Enumerated(EnumType.STRING)
+    @Convert(converter = TransactionCategoryConverter.class)
     @Column(nullable = false)
     private TransactionCategory category;
 

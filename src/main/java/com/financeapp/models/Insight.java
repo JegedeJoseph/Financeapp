@@ -1,6 +1,7 @@
 package com.financeapp.models;
 
 import com.financeapp.models.enums.InsightType;
+import com.financeapp.utils.InsightTypeConverter;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -35,7 +36,7 @@ public class Insight {
     @Column(nullable = false, columnDefinition = "TEXT")
     private String message;
 
-    @Enumerated(EnumType.STRING)
+    @Convert(converter = InsightTypeConverter.class)
     @Column(nullable = false)
     private InsightType insightType;
 

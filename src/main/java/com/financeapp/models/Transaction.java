@@ -2,6 +2,8 @@ package com.financeapp.models;
 
 import com.financeapp.models.enums.TransactionCategory;
 import com.financeapp.models.enums.TransactionType;
+import com.financeapp.utils.TransactionCategoryConverter;
+import com.financeapp.utils.TransactionTypeConverter;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -39,11 +41,11 @@ import java.time.LocalDateTime;
         @Column(length = 500)
         private String description;
 
-        @Enumerated(EnumType.STRING)
+        @Convert(converter = TransactionCategoryConverter.class)
         @Column(nullable = false)
         private TransactionCategory category;
 
-        @Enumerated(EnumType.STRING)
+        @Convert(converter = TransactionTypeConverter.class)
         @Column(nullable = false)
         private TransactionType transactionType;
 
