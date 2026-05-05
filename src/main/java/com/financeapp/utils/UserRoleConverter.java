@@ -12,4 +12,3 @@ public class UserRoleConverter extends EnumConverter<UserRole> {
     }
 }
 
-}
