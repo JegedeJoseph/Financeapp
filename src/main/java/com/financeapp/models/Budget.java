@@ -45,10 +45,10 @@ public class Budget {
     @Column(nullable = false, precision = 19, scale = 4)
     private BigDecimal currentSpending = BigDecimal.ZERO;
 
-    @Column(nullable = false)
+    @Column(name = "budget_month", nullable = false)
     private Integer month;
 
-    @Column(nullable = false)
+    @Column(name = "budget_year", nullable = false)
     private Integer year;
 
     private boolean alertSent = false;

@@ -21,7 +21,7 @@
     <properties>
         <java.version>17</java.version>
         <jjwt.version>0.12.6</jjwt.version>
-        <springdoc.version>2.2.0</springdoc.version>
+        <springdoc.version>2.7.0</springdoc.version>
         <lombok.version>1.18.46</lombok.version>
     </properties>
 
@@ -124,6 +124,11 @@
             <artifactId>resilience4j-spring-boot3</artifactId>
             <version>2.2.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -155,7 +160,7 @@
                         </path>
                     </annotationProcessorPaths>
                     <compilerArgs>
-                    <arg>-parameters</arg>   <!-- ← Add this -->
+                    <arg>-parameters</arg>
                 </compilerArgs>
                 </configuration>
             </plugin>
