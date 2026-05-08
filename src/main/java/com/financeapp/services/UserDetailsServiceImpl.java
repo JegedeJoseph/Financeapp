@@ -2,6 +2,7 @@ package com.financeapp.services;
 
 import com.financeapp.models.User;
 import com.financeapp.repositories.UserRepository;
+import com.financeapp.security.UserPrincipal;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -22,13 +23,12 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found with email: " + email));
 
-        return new org.springframework.security.core.userdetails.User(
+        return new UserPrincipal(
+                user.getId(),
                 user.getEmail(),
                 user.getPasswordHash(),
+                user.getFullName(),
                 user.isEnabled(),
-                true,
-                true,
-                true,
                 Collections.singletonList(new SimpleGrantedAuthority(user.getRole().name()))
         );
     }
