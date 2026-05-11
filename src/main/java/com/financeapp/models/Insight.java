@@ -47,10 +47,9 @@ public class Insight {
     private boolean read = false;
 
     @ElementCollection
-    @CollectionTable(name = "insight_metadata",
-            joinColumns = @JoinColumn(name = "insight_id"))
+    @CollectionTable(name = "insight_metadata", joinColumns = @JoinColumn(name = "insight_id"))
     @MapKeyColumn(name = "key_name")
-    @Column(name = "value")
+    @Column(name = "meta_value")
     private Map<String, String> metadata = new HashMap<>();
 
     @Builder.Default
