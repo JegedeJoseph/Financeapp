@@ -12,7 +12,6 @@ COPY src ./src
 
 # Build the project (skip tests for faster builds)
 RUN mvn clean package -DskipTests
-RUN ls -la /app/target
 
 # Stage 2: Create the final runtime image
 FROM eclipse-temurin:25-alpine
@@ -27,4 +26,4 @@ EXPOSE 8080
 
 # Run the application
 # In your Dockerfile or Render start command:
-ENTRYPOINT ["java", "--enable-native-access=ALL-UNNAMED", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]

@@ -3,3 +3,7 @@ target/
 .idea/
 .git/
 .env
+
+# Exclude ML service entirely from Java build
+ml-service/
+ml-service/**
