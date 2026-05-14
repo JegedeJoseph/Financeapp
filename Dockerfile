@@ -12,6 +12,7 @@ COPY src ./src
 
 # Build the project (skip tests for faster builds)
 RUN mvn clean package -DskipTests
+RUN ls -la /app/target
 
 # Stage 2: Create the final runtime image
 FROM eclipse-temurin:25-alpine
