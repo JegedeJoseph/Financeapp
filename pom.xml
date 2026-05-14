@@ -18,10 +18,6 @@
     <packaging>pom</packaging>
     <name>Personal Finance Manager</name>
     <description>Intelligent Personal Finance Management System with ML Integration</description>
-    <modules>
-        <module>untitled</module>
-    </modules>
-
     <properties>
         <java.version>17</java.version>
         <jjwt.version>0.12.6</jjwt.version>
