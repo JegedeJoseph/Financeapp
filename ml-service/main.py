@@ -18,7 +18,8 @@ app = FastAPI(
     version="1.0.0"
 )
 
-app.addMiddleware(
+# FIXED: snake_case method name
+app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
     allow_credentials=True,
@@ -64,6 +65,21 @@ class ForecastResponse(BaseModel):
     confidence: float
     recommendation: str
 
+@app.get("/")
+async def root():
+    return {
+        "service": "Personal Finance ML Service",
+        "version": "1.0.0",
+        "status": "running",
+        "endpoints": {
+            "health": "/health",
+            "docs": "/docs",
+            "categorize": "/api/v1/ml/categorize-transaction",
+            "analyze_patterns": "/api/v1/ml/analyze-patterns",
+            "predict_expense": "/api/v1/ml/predict-expense"
+        }
+    }
+
 @app.get("/health")
 async def health_check():
     return {"status": "healthy", "service": "ML Analytics Service"}
@@ -71,6 +87,7 @@ async def health_check():
 @app.post("/api/v1/ml/categorize-transaction", response_model=CategorizationResponse)
 async def categorize_transaction(request: CategorizationRequest):
     try:
+        logger.info(f"Categorizing: {request.description}")
         cleaned = clean_description(request.description)
         category, confidence = categorizer.predict(cleaned, request.amount)
 
