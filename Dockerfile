@@ -1,5 +1,5 @@
 # Stage 1: Build the application
-FROM maven:3.9-eclipse-temurin-25-alpine AS build
+FROM maven:3.9-eclipse-temurin-26-alpine AS build
 
 WORKDIR /app
 
@@ -13,8 +13,17 @@ COPY src ./src
 # Build the project (skip tests for faster builds)
 RUN mvn clean package -DskipTests
 
+RUN mvn clean package -DskipTests && \
+    echo "=== TARGET CONTENTS ===" && \
+    ls -la /app/target/ 2>/dev/null || echo "TARGET DIR MISSING" && \
+    echo "=== ALL JARS IN CONTAINER ===" && \
+    find / -name "*.jar" -path "*/target/*" 2>/dev/null && \
+    echo "=== POM PACKAGING TYPE ===" && \
+    grep -i "<packaging>" /app/pom.xml || echo "No packaging tag found - defaults to jar"
+
+
 # Stage 2: Create the final runtime image
-FROM eclipse-temurin:25-alpine
+FROM eclipse-temurin:26-alpine
 
 WORKDIR /app
 
@@ -27,3 +36,5 @@ EXPOSE 8080
 # Run the application
 # In your Dockerfile or Render start command:
 ENTRYPOINT ["java", "-jar", "app.jar"]
+
+

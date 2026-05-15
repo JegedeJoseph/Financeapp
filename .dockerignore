@@ -4,6 +4,7 @@ target/
 .git/
 .env
 .gitignore
+.gitattributes
 README.md
 *.md
 
