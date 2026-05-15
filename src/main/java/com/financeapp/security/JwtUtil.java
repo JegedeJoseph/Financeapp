@@ -1,13 +1,13 @@
 package com.financeapp.security;
 
 
-import com.sun.security.auth.UserPrincipal;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
+import com.financeapp.services.UserDetailsServiceImpl;
 
 import javax.crypto.SecretKey;
 import java.nio.charset.StandardCharsets;
@@ -56,10 +56,9 @@ public class JwtUtil {
 
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
-        // Add user ID to claims if UserDetails is our custom implementation
-        if (userDetails instanceof UserPrincipal) {
-            claims.put("userId", ((UserPrincipal) userDetails).getUserId());
-        }
+        // Add user ID to claims if UserDetails is our custom
+        UserDetailsServiceImpl userPrincipal = (UserDetailsServiceImpl) userDetails;
+        String username = userDetails.getUsername();
         return createToken(claims, userDetails.getUsername());
     }
 

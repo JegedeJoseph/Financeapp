@@ -86,8 +86,9 @@ public class AnalyticsService {
 
         if (monthsCount > 0) {
             totalSpending = totalSpending.divide(BigDecimal.valueOf(monthsCount), 2, BigDecimal.ROUND_HALF_UP);
+            int finalMonthsCount = monthsCount;
             categoryAverages.forEach((cat, total) ->
-                    categoryAverages.put(cat, total.divide(BigDecimal.valueOf(monthsCount), 2, BigDecimal.ROUND_HALF_UP))
+                    categoryAverages.put(cat, total.divide(BigDecimal.valueOf(finalMonthsCount), 2, BigDecimal.ROUND_HALF_UP))
             );
         }
 
