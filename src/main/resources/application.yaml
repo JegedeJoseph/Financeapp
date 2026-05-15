@@ -41,7 +41,7 @@ jwt:
 
 ml:
   service:
-    url: ${ML_SERVICE_URL:http://localhost:5000}
+    url: ${ML_SERVICE_URL:https://financeapp-1-82os.onrender.com}
     api-key: ${ML_API_KEY:}
 
 springdoc:

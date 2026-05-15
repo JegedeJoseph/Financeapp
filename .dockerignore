@@ -3,7 +3,19 @@ target/
 .idea/
 .git/
 .env
+.gitignore
+README.md
+*.md
 
 # Exclude ML service entirely from Java build
 ml-service/
 ml-service/**
+
+# Exclude other non-Java artifacts
+*.py
+*.ipynb
+requirements*.txt
+__pycache__/
+*.pyc
+.venv/
+venv/
