@@ -9,6 +9,7 @@ import com.financeapp.exceptions.AuthenticationException;
 import com.financeapp.exceptions.ResourceAlreadyExistsException;
 import com.financeapp.models.PasswordResetToken;
 import com.financeapp.models.User;
+import com.financeapp.models.VerificationToken;
 import com.financeapp.models.enums.UserRole;
 import com.financeapp.repositories.PasswordResetTokenRepository;
 import com.financeapp.repositories.UserRepository;
@@ -25,6 +26,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Service
@@ -102,6 +104,7 @@ public class AuthService {
     @Transactional
     public void registerUser(RegisterRequest request) {
         // ... existing registration code ...
+        User user = null;
         User savedUser = userRepository.save(user);
 
         // Generate verification token
@@ -124,7 +127,7 @@ public class AuthService {
     }
 
     public void verifyEmail(String token) {
-        com.financeapp.models.VerificationToken verificationToken = verificationTokenRepository.findByToken(token)
+        VerificationToken verificationToken = verificationTokenRepository.findByToken(token)
                 .orElseThrow(() -> new RuntimeException("Invalid verification token"));
 
         if (verificationToken.isUsed() || verificationToken.isExpired()) {
