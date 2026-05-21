@@ -1,0 +1,810 @@
+{
+    "logEvents": [
+        {
+            "createdAt": "2026-05-21T19:50:08+01:00",
+            "message": "  .   ____          _            __ _ _"
+        },
+        {
+            "createdAt": "2026-05-21T19:50:08+01:00",
+            "message": " /\\\\ / ___'_ __ _ _(_)_ __  __ _ \\ \\ \\ \\"
+        },
+        {
+            "createdAt": "2026-05-21T19:50:08+01:00",
+            "message": "( ( )\\___ | '_ | '_| | '_ \\/ _` | \\ \\ \\ \\"
+        },
+        {
+            "createdAt": "2026-05-21T19:50:08+01:00",
+            "message": " \\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )"
+        },
+        {
+            "createdAt": "2026-05-21T19:50:08+01:00",
+            "message": "  '  |____| .__|_| |_|_| |_\\__, | / / / /"
+        },
+        {
+            "createdAt": "2026-05-21T19:50:08+01:00",
+            "message": " =========|_|==============|___/=/_/_/_/"
+        },
+        {
+            "createdAt": "2026-05-21T19:50:08+01:00",
+            "message": " :: Spring Boot ::                (v3.4.0)"
+        },
+        {
+            "createdAt": "2026-05-21T19:50:09+01:00",
+            "message": "2026-05-21T18:50:09.986Z  INFO 1 --- [personal-finance-manager] [           main] c.financeapp.PersonalFinanceApplication  : Starting PersonalFinanceApplication v1.0.0 using Java 26.0.1 with PID 1 (/app/app.jar started by root in /app)"
+        },
+        {
+            "createdAt": "2026-05-21T19:50:09+01:00",
+            "message": "2026-05-21T18:50:09.996Z DEBUG 1 --- [personal-finance-manager] [           main] c.financeapp.PersonalFinanceApplication  : Running with Spring Boot v3.4.0, Spring v6.2.0"
+        },
+        {
+            "createdAt": "2026-05-21T19:50:09+01:00",
+            "message": "2026-05-21T18:50:09.997Z  INFO 1 --- [personal-finance-manager] [           main] c.financeapp.PersonalFinanceApplication  : The following 1 profile is active: \"render\""
+        },
+        {
+            "createdAt": "2026-05-21T19:50:36+01:00",
+            "message": "2026-05-21T18:50:36.292Z  INFO 1 --- [personal-finance-manager] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode."
+        },
+        {
+            "createdAt": "2026-05-21T19:50:38+01:00",
+            "message": "2026-05-21T18:50:38.801Z  INFO 1 --- [personal-finance-manager] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2310 ms. Found 11 JPA repository interfaces."
+        },
+        {
+            "createdAt": "2026-05-21T19:50:50+01:00",
+            "message": "WARNING: A restricted method in java.lang.System has been called"
+        },
+        {
+            "createdAt": "2026-05-21T19:50:50+01:00",
+            "message": "WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (jar:nested:/app/app.jar/!BOOT-INF/lib/tomcat-embed-core-10.1.33.jar!/)"
+        },
+        {
+            "createdAt": "2026-05-21T19:50:50+01:00",
+            "message": "WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module"
+        },
+        {
+            "createdAt": "2026-05-21T19:50:50+01:00",
+            "message": "WARNING: Restricted methods will be blocked in a future release unless native access is enabled"
+        },
+        {
+            "createdAt": "2026-05-21T19:50:56+01:00",
+            "message": "2026-05-21T18:50:56.288Z  INFO 1 --- [personal-finance-manager] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)"
+        },
+        {
+            "createdAt": "2026-05-21T19:50:56+01:00",
+            "message": "2026-05-21T18:50:56.492Z  INFO 1 --- [personal-finance-manager] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]"
+        },
+        {
+            "createdAt": "2026-05-21T19:50:56+01:00",
+            "message": "2026-05-21T18:50:56.493Z  INFO 1 --- [personal-finance-manager] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]"
+        },
+        {
+            "createdAt": "2026-05-21T19:50:56+01:00",
+            "message": "2026-05-21T18:50:56.894Z  INFO 1 --- [personal-finance-manager] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext"
+        },
+        {
+            "createdAt": "2026-05-21T19:50:56+01:00",
+            "message": "2026-05-21T18:50:56.895Z  INFO 1 --- [personal-finance-manager] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 45807 ms"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "2026-05-21T18:51:02.000Z ERROR 1 --- [personal-finance-manager] [           main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/com/financeapp/security/JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userDetailsServiceImpl' defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/com/financeapp/services/UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.financeapp.repositories.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "2026-05-21T18:51:02.288Z  INFO 1 --- [personal-finance-manager] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "2026-05-21T18:51:02.393Z  WARN 1 --- [personal-finance-manager] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "2026-05-21T18:51:02.696Z  INFO 1 --- [personal-finance-manager] [           main] .s.b.a.l.ConditionEvaluationReportLogger : "
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled."
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "2026-05-21T18:51:02.890Z ERROR 1 --- [personal-finance-manager] [           main] o.s.boot.SpringApplication               : Application run failed"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "org.springframework.context.ApplicationContextException: Unable to start web server"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat com.financeapp.PersonalFinanceApplication.main(PersonalFinanceApplication.java:13) ~[!/:1.0.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102) ~[app.jar:1.0.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64) ~[app.jar:1.0.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40) ~[app.jar:1.0.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\t... 13 common frames omitted"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter' defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/com/financeapp/security/JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userDetailsServiceImpl' defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/com/financeapp/services/UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.financeapp.repositories.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4426) ~[tomcat-embed-core-10.1.33.jar!/:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.33.jar!/:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.33.jar!/:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:330) ~[na:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.33.jar!/:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:149) ~[na:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.33.jar!/:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772) ~[tomcat-embed-core-10.1.33.jar!/:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.33.jar!/:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.33.jar!/:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:330) ~[na:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.33.jar!/:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:149) ~[na:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.33.jar!/:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.33.jar!/:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.apache.catalina.core.StandardService.startInternal(StandardService.java:415) ~[tomcat-embed-core-10.1.33.jar!/:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870) ~[tomcat-embed-core-10.1.33.jar!/:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.apache.catalina.startup.Tomcat.start(Tomcat.java:437) ~[tomcat-embed-core-10.1.33.jar!/:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\t... 18 common frames omitted"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl' defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/com/financeapp/services/UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.financeapp.repositories.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        }
+    ],
+    "nextPageToken": "Bxkq6kVGFtq2y_MoigeqscPOdhXVbhiVtLoAmXb5jCpc3_GCuCYw73UG4KDu8Dv6OvBxS-khAAx0_K52DkHjzK9cJl7V5HH6PTSlXkO1Sg6VDxMAB3p9olOns8NShM8Jpk6XeJvz_7iHhsGZITBpUAgYRaHiCnA6BGxf4V8THnmV7rqzzCJCzA59klojaYFClOLAefgqqudkiUNLxn4NI4C4J4s-WFPo4XjNrMajQuy3W0wX0aeR5ifJOI0R2KNIqZDMj90YLUoK6LE-lmRiK8itjzBxpOR6t-vvmTJG5II"
+}
+{
+    "logEvents": [
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1626) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\t... 59 common frames omitted"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.financeapp.repositories.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1701) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1450) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1568) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\t... 73 common frames omitted"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1351) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1181) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\t... 86 common frames omitted"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [com/financeapp/config/DatabaseConfig.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception with message: URL must start with 'jdbc'"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1351) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1181) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\t... 98 common frames omitted"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/financeapp/config/DatabaseConfig.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception with message: URL must start with 'jdbc'"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1351) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1181) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1568) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\t... 110 common frames omitted"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception with message: URL must start with 'jdbc'"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\t... 123 common frames omitted"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "Caused by: java.lang.IllegalArgumentException: URL must start with 'jdbc'"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.util.Assert.isTrue(Assert.java:116) ~[spring-core-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.jdbc.DatabaseDriver.fromJdbcUrl(DatabaseDriver.java:297) ~[spring-boot-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:180) ~[spring-boot-autoconfigure-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.initializeDataSourceBuilder(DataSourceProperties.java:125) ~[spring-boot-autoconfigure-3.4.0.jar!/:3.4.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat com.financeapp.config.DatabaseConfig.dataSource(DatabaseConfig.java:16) ~[!/:1.0.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat com.financeapp.config.DatabaseConfig$$SpringCGLIB$$0.CGLIB$dataSource$0(<generated>) ~[!/:1.0.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat com.financeapp.config.DatabaseConfig$$SpringCGLIB$$FastClass$$1.invoke(<generated>) ~[!/:1.0.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:348) ~[spring-context-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat com.financeapp.config.DatabaseConfig$$SpringCGLIB$$0.dataSource(<generated>) ~[!/:1.0.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\tat org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171) ~[spring-beans-6.2.0.jar!/:6.2.0]"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:02+01:00",
+            "message": "\t... 126 common frames omitted"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:56+01:00",
+            "message": "  .   ____          _            __ _ _"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:56+01:00",
+            "message": " /\\\\ / ___'_ __ _ _(_)_ __  __ _ \\ \\ \\ \\"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:56+01:00",
+            "message": "( ( )\\___ | '_ | '_| | '_ \\/ _` | \\ \\ \\ \\"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:56+01:00",
+            "message": " \\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:56+01:00",
+            "message": "  '  |____| .__|_| |_|_| |_\\__, | / / / /"
+        },
+        {
+            "createdAt": "2026-05-21T19:51:56+01:00",
+            "message": " =========|_|==============|___/=/_/_/_/"
+        }
+    ],
+    "nextPageToken": "Bxkq6kVGFtq2y_MoigeqscPOdhXVbhiVtLoAmXb5jCq5pXUExOqfEWgI4qSa8krDoxquQ_PzcS3PBrK_0v74JSkEnV1fbLWtFZIDnQHfWgDa7Hgu8iGN494qUDQqYZleXnZr48SdmV-pyLpB6pFQ_0nzrrZ88Z-FTCSS-jxkEdTb2085dSsxtSUhfQuuHDgbzXHY-lVxXN-bsZKvrf0c-Aaal9jUMrNYp6MmScqfYcA_il6TnIP2o5vyDCAButecsXLJXWVJ3l97ThsPvvek4u3C3fB6VxGWTdcxxXWyOg4"
+}
