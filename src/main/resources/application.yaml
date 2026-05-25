@@ -120,3 +120,20 @@ spring:
       enabled: false
 
 kind: Application
+
+
+---
+# Lightsail profile – same as Render, but you can override specific things if needed
+spring:
+  config:
+    activate:
+      on-profile: lightsail
+  datasource:
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+kind: Application
