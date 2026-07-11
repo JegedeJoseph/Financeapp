@@ -47,6 +47,9 @@ public class AnalyticsController {
     }
 
     private Long getUserId(UserDetails userDetails) {
-        return 1L; // Placeholder
+        if (userDetails instanceof com.financeapp.security.UserPrincipal principal) {
+            return principal.getUserId();
+        }
+        throw new IllegalStateException("Unexpected UserDetails type: " + userDetails.getClass());
     }
 }

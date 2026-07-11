@@ -65,8 +65,9 @@ public class TransactionController {
     }
 
     private Long getUserIdFromUserDetails(UserDetails userDetails) {
-        // Implementation to extract user ID from UserDetails
-        // This would typically involve a service call or storing ID in the principal
-        return 1L; // Placeholder
+        if (userDetails instanceof com.financeapp.security.UserPrincipal principal) {
+            return principal.getUserId();
+        }
+        throw new IllegalStateException("Unexpected UserDetails type: " + userDetails.getClass());
     }
 }

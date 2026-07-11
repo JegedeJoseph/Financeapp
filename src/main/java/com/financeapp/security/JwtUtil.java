@@ -7,7 +7,6 @@ import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
-import com.financeapp.services.UserDetailsServiceImpl;
 
 import javax.crypto.SecretKey;
 import java.nio.charset.StandardCharsets;
@@ -37,6 +36,14 @@ public class JwtUtil {
         return extractClaim(token, Claims::getExpiration);
     }
 
+    /**
+     * Extracts the userId embedded in the JWT claims.
+     * Returns null if the claim is absent (e.g. tokens issued before this change).
+     */
+    public Long extractUserId(String token) {
+        return extractClaim(token, claims -> claims.get("userId", Long.class));
+    }
+
     public <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
         final Claims claims = extractAllClaims(token);
         return claimsResolver.apply(claims);
@@ -54,17 +61,21 @@ public class JwtUtil {
         return extractExpiration(token).before(new Date());
     }
 
+    /**
+     * Generates a JWT that embeds the user's database ID, email, and display name.
+     */
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
-        // Add user ID to claims if UserDetails is our custom
-        UserDetailsServiceImpl userPrincipal = (UserDetailsServiceImpl) userDetails;
-        String username = userDetails.getUsername();
+        if (userDetails instanceof UserPrincipal principal) {
+            claims.put("userId", principal.getUserId());
+            claims.put("fullName", principal.getFullName());
+        }
         return createToken(claims, userDetails.getUsername());
     }
 
+    /** Convenience overload for cases where only a username is available. */
     public String generateToken(String username) {
-        Map<String, Object> claims = new HashMap<>();
-        return createToken(claims, username);
+        return createToken(new HashMap<>(), username);
     }
 
     private String createToken(Map<String, Object> claims, String subject) {

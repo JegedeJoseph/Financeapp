@@ -33,8 +33,9 @@ public class DashboardController {
     }
 
     private Long getUserId(UserDetails userDetails) {
-        // You need to implement this - either store user ID in JWT claims
-        // or look up by username
-        return 1L; // Placeholder - will be fixed when we update JWT
+        if (userDetails instanceof com.financeapp.security.UserPrincipal principal) {
+            return principal.getUserId();
+        }
+        throw new IllegalStateException("Unexpected UserDetails type: " + userDetails.getClass());
     }
 }
