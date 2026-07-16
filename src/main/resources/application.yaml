@@ -123,17 +123,55 @@ kind: Application
 
 
 ---
-# Lightsail profile – same as Render, but you can override specific things if needed
+# ============================================
+# LIGHTSAIL PROFILE — AWS VPS deployment
+# Activated by: SPRING_PROFILES_ACTIVE=lightsail
+# ============================================
 spring:
   config:
     activate:
       on-profile: lightsail
+
   datasource:
     url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
     username: ${PGUSER}
     password: ${PGPASSWORD}
     driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 5
+      minimum-idle: 2
+      idle-timeout: 300000
+      max-lifetime: 1200000
+      keepalive-time: 60000
+
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          batch_size: 20
+    show-sql: false
+
+  h2:
+    console:
+      enabled: false  # Never expose H2 console in production
+
+# ML Service — set ML_SERVICE_URL to private IP of financeapp-ml instance
+# e.g. ML_SERVICE_URL=http://172.26.5.10:5000
+ml:
+  service:
+    url: ${ML_SERVICE_URL:http://localhost:5000}
+    api-key: ${ML_API_KEY:}
+
+# Reduce verbose logging in production
+logging:
+  level:
+    com.financeapp: INFO
+    org.springframework.security: WARN
+    org.hibernate.SQL: WARN
+    org.springframework.web: WARN
 
 kind: Application
